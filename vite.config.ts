@@ -1,5 +1,6 @@
 import { defineConfig, normalizePath } from "vite";
 import react from "@vitejs/plugin-react-swc";
+// import viteEslint from "vite-plugin-eslint";
 import autoprefixer from "autoprefixer";
 import path from "path";
 
@@ -18,6 +19,7 @@ export default defineConfig({
           autoprefixer({
             overrideBrowserslist: ["Chrome >= 40", "ff>31", "ie>11"],
           }),
+          // viteEslint(),
         ],
       },
     },
