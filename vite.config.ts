@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 // import viteEslint from "vite-plugin-eslint";
 import autoprefixer from "autoprefixer";
 import path, { resolve } from "path";
+import svgr from "vite-plugin-svgr";
 
 const variablePath = normalizePath(path.resolve("./src/variables.scss"));
 
@@ -13,7 +14,7 @@ export default defineConfig({
       '@assets': path.join(__dirname, 'src/assets'),
     }
   },
-  plugins: [react()],
+  plugins: [react(),svgr()],
   css: {
     preprocessorOptions: {
       scss: {
