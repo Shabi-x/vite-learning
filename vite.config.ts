@@ -6,7 +6,8 @@ import path, { resolve } from "path";
 import svgr from "vite-plugin-svgr";
 
 const variablePath = normalizePath(path.resolve("./src/variables.scss"));
-
+const isProduction = process.env.NODE_ENV === "production";
+const CDN_URL = "https://cdn.xxxxx.com";
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {   
