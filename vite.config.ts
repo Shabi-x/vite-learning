@@ -15,7 +15,9 @@ export default defineConfig({
       '@assets': path.join(__dirname, 'src/assets'),
     }
   },
+
   plugins: [react(),svgr()],
+
   css: {
     preprocessorOptions: {
       scss: {
@@ -31,4 +33,13 @@ export default defineConfig({
       },
     },
   },
+  
+  optimizeDeps:{
+    entries:[],//扫瞄入口
+    include:[],//强制进行预构建的包，声明需要按需加载的依赖
+    exclude:[],//强制不进行预构建的包，声明不需要预构建的依赖,这个配置并不常用，一般不用
+    esbuildOptions:{
+      plugins:[]//esbuild插件
+    }
+  }
 });
